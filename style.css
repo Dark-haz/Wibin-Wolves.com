@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:url('images/ww-portrait.jpg');
+    background-position: -100px 0;
+    background-color: white;
+}
+
+h1.label{
+    letter-spacing: 20px;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+}
+/* icon container */
+div.gear{
+    width:50px;
+    height: 50px;
+    margin: auto;
+}
+/* icon centering */
+div.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* icon animation */
+@keyframes spin {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(-360deg);}
+}
+
+i.secondary{
+    animation: spin 2s linear infinite;
+}
+
+span.transform{
+    transform: translate(-6px,-7px);
+}
+
+/* social icons */
+
+section.socials{
+    margin-bottom: 200px;
+    height: 300px;
+    max-width: 400px;
+    margin: auto;
+
+}
+
+section.socials  div{
+    text-align: center;
+    margin: 70px auto;
+    font-size: 30px;
+    max-width: 30%;
+    padding: 10px;
+}
+
+section.socials div a {
+    color: white;
+}
+
+section.socials div.twitter{
+    background-color: #00acee;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: 11%; 
+}
+
+section.socials div.discord{
+    background-color: #5865F2;
+    margin-left: 8px;
+    width: 60px;
+    margin-left: 9.5%; 
+}
+
+@media only screen and (min-width : 520px) and (max-width : 767px) {
+
+    section.socials  div{
+        transform: translateX(260px);
+    }
+}
+
+@media only screen and (min-width : 768px){
+    body{
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: -5px 0px;
+        background-image: url('images/ww-landscape.png');
+    }
+
+    /* body::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url('images/ww-landscape.png');
+        position: absolute;
+        background-image: cover;
+        z-index: -1;
+    } */
+
+    section.socials{
+        display: flex;
+        flex-direction: row;
+        width: 240px;
+        position: absolute;
+        margin-left:120px ;
+        transform: translateY(180px);
+        }
+
+    section.socials div.discord{
+        height: 55px;
+    }
+
+
+}
